@@ -14,13 +14,13 @@
             <th>Year</th>
         </tr>
  
-        @foreach ($books as $book)
-            <tr>
-                <td>{{ $book['title'] }}</td>
-                <td>{{ $book['author'] }}</td>
-                <td>{{ $book['year'] }}</td>
-            </tr>
-        @endforeach
+    @foreach ($books as $book)
+
+        <p>
+          <a href="{{ route('books.show', ['id' => $book['id']]) }}"> {{ $book['title'] }}</a>
+        </p>
+
+    @endforeach
     </table>
 </body>
 </html>
