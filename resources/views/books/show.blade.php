@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Book Details</title>
-</head>
-<body>
+@extends('layouts.app')
 
-    <h1>Book Details</h1>
+@section('title', 'Book Details')
 
-    <p><strong>ID:</strong> {{ $book['id'] }}</p>
+@section('content')
 
-    <p><strong>Title:</strong> {{ $book['title'] }}</p>
+    <div class="card">
+        <div class="card-body">
 
-    <p><strong>Author:</strong> {{ $book['author'] }}</p>
+            <h1 class="card-title">Book Details</h1>
 
-    <p><strong>Year:</strong> {{ $book['year'] }}</p>
+            <p><strong>ID:</strong> {{ $book['id'] }}</p>
 
-    <p><strong>Genre:</strong> {{ $book['genre'] }}</p>
+            <p><strong>Title:</strong> {{ $book['title'] }}</p>
 
-    <p><strong>Name:</strong> Jorence Karl Borja</p>
+            <p><strong>Author:</strong> {{ $book['author'] }}</p>
 
-    <a href="{{ route('books.index') }}">Back to Books</a>
+            <p><strong>Year:</strong> {{ $book['year'] }}</p>
 
-</body>
-</html>
+            <p><strong>Genre:</strong> {{ $book['genre'] }}</p>
+
+            <p><strong>Name:</strong> Jorence Karl Borja</p>
+
+            <a class="btn btn-primary"
+               href="{{ route('books.index') }}">
+                Back to Books
+            </a>
+
+        </div>
+    </div>
+
+@endsection
