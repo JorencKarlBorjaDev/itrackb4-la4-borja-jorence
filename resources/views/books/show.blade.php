@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h1 class="card-title">Book Details</h1>
+            <h1 class="card-title">Book Information</h1>
 
             <p><strong>ID:</strong> {{ $book['id'] }}</p>
 
