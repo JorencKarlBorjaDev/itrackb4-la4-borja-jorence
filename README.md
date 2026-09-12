@@ -64,3 +64,20 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+Lab 3 – Route Parameters and Named Routes
+
+Q1
+
+I placed the featured route before the detail route because the featured route uses a specific URL, while the detail route uses a dynamic `{id}` parameter. If I swapped them, the detail route could match the featured URL first and treat the word `featured` as an ID.
+
+Q2
+
+When someone visits an ID that does not exist in my data, the application shows a 404 Not Found page. I made this happen by checking if the ID exists in the data and using `abort(404)` when no matching item is found.
+
+Q3
+
+My links use route names instead of typed URLs because route names make the links easier to manage if the URL changes later. If I used typed URLs and changed the route path, the links would still point to the old URL and would stop working.
+
