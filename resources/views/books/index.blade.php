@@ -20,7 +20,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>
-                            <a href="{{ route('books.show', ['id' => $book['id']]) }}">
+                            <a href="{{ route('books.show', ['book' => $book['id']]) }}">
                                 {{ $book['title'] }}
                             </a>
                         </td>

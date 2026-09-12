@@ -13,7 +13,6 @@ class BookController extends Controller
     {
         return view('books.index', ['books' => $this->books()]);
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -21,7 +20,6 @@ class BookController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -29,7 +27,6 @@ class BookController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      */
@@ -43,7 +40,6 @@ class BookController extends Controller
         }
         return view('books.show', ['book' => $books[$id]]);
     }
-
     /**
      * Show the form for editing the specified resource.
      */
@@ -59,7 +55,6 @@ class BookController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      */
@@ -67,8 +62,6 @@ class BookController extends Controller
     {
         //
     }
-
-
     public function featured()
     {
         $books = $this->books();
@@ -76,9 +69,6 @@ class BookController extends Controller
 
         return view('books.featured', ['book' => $book]);
     }
-
-
-    
     public function filter($genre = null)
     {
         $books = $this->books();
@@ -97,8 +87,6 @@ class BookController extends Controller
     }
         return view('books.filter', ['books' => $filteredBooks, 'genre' => $genre]);
     }
-
-
     private function books()
     {
         return [
